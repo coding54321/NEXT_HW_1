@@ -1,0 +1,315 @@
+* {
+    font-family: helvetica;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.night_mode {
+    filter: brightness(0) invert(1);
+}
+
+/* 모바일 화면 크기 설정*/
+.mobile-viewport-container {
+    position: absolute;
+    width: 430px;
+    height: 730px;
+    margin: auto;
+    border: 1px solid #ccc;
+    top: 50%;
+    bottom: 50%;
+    left: 10%;
+}
+
+/* 상단고정바*/
+.box_container_1 {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 img,
+.box2 img,
+.box3 img {
+    width: 30%;
+}
+
+/* 로고, 포스팅, 팔로워, 팔로잉*/
+
+.profile_top {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 3%;
+    margin-left: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.logo img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.margin {
+    width: 25px;
+}
+
+.upper_numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    margin-right: 10%;
+}
+
+.upper_numbers div .number {
+    font-weight: 800;
+}
+
+.upper_numbers div .text {
+    font-weight: 400;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+    line-height: 120%;
+}
+
+.info1 {
+    margin-left: 5%;
+    margin-bottom: 0.3%;
+    font-size: 90%;
+}
+
+.info1 a {
+    text-decoration: none;
+}
+
+.threadinfo {
+    background-color: #262626;
+    width: 20%;
+    padding: 1%;
+    border-radius: 5rem;
+    font-size: 80%;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.threadinfo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.threadinfo img {
+    width: 15%;
+    margin-right: 3%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 800;
+    margin-top: 3%;
+    height: 4%;
+}
+
+.follow_button,
+.message_button,
+.email_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    flex-grow: 50;
+    height: 100%;
+    padding: 1%;
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    font-size: 70%;
+    cursor: pointer;
+}
+
+.margin1 {
+    flex-grow: 8;
+}
+
+.margin2 {
+    flex-grow: 1;
+}
+
+.follow_button {
+    background-color: #0098fd;
+}
+
+.highlight {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-bottom: 4%;
+}
+
+.close_friends,
+.shorts,
+.creators,
+.vibes,
+.awards {
+    width: 20%;
+    font-size: 100%;
+    justify-content: center;
+}
+
+.tab {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 9vh;
+    z-index: 2;
+    padding: 2%;
+}
+
+.tab img {
+    width: 25%;
+}
+
+.tab div {
+    display: flex;
+    justify-content: center;
+}
+
+.highlight img {
+    border-radius: 50%;
+    width: 100%;
+    padding: 2vh;
+}
+
+.link {
+    width: 1rem;
+    height: 1rem;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+.contents img {
+    display: block;
+}
+
+.contents .margin {
+    width: 2%;
+}
+
+.line1,
+.line2,
+.line3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5px;
+}
+
+.feed img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.underbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    width: 100%;
+    height: 6%;
+    padding: 1%;
+    z-index: 2;
+}
+
+.underbar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.underbar img {
+    width: 25%;
+    margin: 0 10%;
+}
+
+.contents img {
+    width: 100%;
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 7%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+.content-wrapper::-webkit-scrollbar {
+    display: none;
+}
