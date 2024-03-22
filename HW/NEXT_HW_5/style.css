@@ -1,0 +1,234 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 모바일 뷰포트 컨테이너 스타일 */
+.mobile-viewport-container {
+    max-width: 428px; /* iPhone 14 Pro Max의 가로 너비와 유사하게 설정 */
+    margin: auto;
+    height: 100vh; /* 브라우저 창의 전체 높이 */
+    border: 1px solid #ccc; /* 경계선 표시 */
+    display: flex;
+    flex-direction: column; /* 컨텐츠를 세로로 정렬 */
+    overflow: auto; /* 내용이 넘칠 경우 스크롤 표시 */
+    background-color: #101012;
+    color: white;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 55px;
+}
+
+.mobile-viewport-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15px;
+    max-width: 390px;
+    background-color: #101012;
+    padding-bottom: 0;
+    background-color: rgba(16, 16, 18, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.accounts img {
+    border-radius: 30px;
+}
+
+#center {
+    align-items: center;
+}
+
+.head,
+.setting {
+    display: flex;
+    padding: 15px; /* 요소 내부 여백 */
+    width: 85%;
+}
+
+.head.center {
+    align-items: center;
+}
+
+.bank,
+.accounts,
+.month,
+.service,
+.recommend {
+    display: flex;
+    padding: 15px; /* 요소 내부 여백 */
+    width: 85%;
+    background-color: #1c1c1f;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.bank {
+    justify-content: space-between;
+    background-color: #1c1c1f;
+}
+
+.bank .text {
+    margin-top: 3px;
+    margin-left: 8px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.accounts,
+.month {
+    display: flex;
+    flex-direction: column;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.text_u {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.text_d {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.account .button {
+    background-color: #25252a;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 30px;
+    padding: 8px;
+    text-align: center;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    padding: 10px;
+    text-align: center;
+}
+
+.service {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.recommend {
+    display: flex;
+    flex-direction: column;
+}
+
+.recommend .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.recommend .content div {
+    text-align: center;
+    align-items: center;
+}
+
+.recommend .account {
+    margin-bottom: 3px;
+}
+
+.recommend .text_d,
+.recommend .text_u {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.gray {
+    filter: contrast(30%);
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    width: 90%;
+    text-align: center;
+    font-size: 13px;
+}
+
+.setting .display {
+    display: flex;
+    background-color: #1c1c1f;
+    border-radius: 10px;
+    width: 49%;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting .property {
+    display: flex;
+    background-color: #1c1c1f;
+    border-radius: 10px;
+    height: 35px;
+    width: 49%;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    height: 0.5px;
+    background-color: #898b8e;
+    border: 0;
+}
+
+hr.line {
+    width: 1px;
+    height: 15px;
+    background-color: #898b8e;
+    border: 0;
+}
+
+.terms {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 13px;
+    color: #898b8e;
+}
+
+.tab {
+    font-size: 12px;
+    background-color: #1c1c1f;
+    border-radius: 30px 30px 0 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 428px;
+    border-top: 1px solid #898b8e;
+    border-bottom: none;
+}
+
+.tab .icon {
+    display: flex;
+    flex-direction: column;
+}
