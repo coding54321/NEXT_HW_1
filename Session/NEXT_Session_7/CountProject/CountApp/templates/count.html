@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        {%load static%}
+        <link rel="stylesheet" type="text/css" href="{%static 'count.css'%}" />
+    </head>
+    <body>
+        <h1>✨글자를 입력해 보세요!✨</h1>
+        <h2>🔽 Type Here 🔽</h2>
+        <form action="{%url 'result'%}" method="post">
+            {% csrf_token %}
+            <textarea name="text" cols="30" rows="10" style="border-radius: 10px"></textarea>
+            <br />
+            <input type="submit" value="제출" />
+        </form>
+    </body>
+</html>
