@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'project.css' %}" />
+    </head>
+    <body>
+        <div class="title">
+            <div><a href="{% url 'info' %}">INFO</a></div>
+            <div><a href="{% url 'project' %}">PROJECT</a></div>
+            <div><a href="{% url 'contact' %}">CONTACT</a></div>
+        </div>
+        <div class="content">
+            <div class="photo">
+                <div class="first">
+                    <div><img src="{%static 'image/인스타클론코딩.png' %}" /></div>
+                    <div><img src="{%static 'image/숫자맞추기 게임.png' %}" /></div>
+                </div>
+                <div class="second">
+                    <div><img src="{%static 'image/웹크롤링.png' %}" /></div>
+                    <div><img src="{%static 'image/토스클론코딩.png' %}" /></div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="h1">WOW! 놀라워라!</div>
+                <div class="h2">CSS 심화 : 인스타그램, 토스 클론코딩</div>
+                <div class="h2">Request, Selenium : 마켓컬리 데이터 크롤링</div>
+                <div class="h2">Python : 숫자야구</div>
+            </div>
+        </div>
+    </body>
+</html>

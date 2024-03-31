@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}" />
+    </head>
+    <body>
+        <div class="title">
+            <div><a href="{% url 'info' %}">INFO</a></div>
+            <div><a href="{% url 'project' %}">PROJECT</a></div>
+            <div><a href="{% url 'contact' %}">CONTACT</a></div>
+        </div>
+        <div class="content">
+            <div class="profile">
+                <img src="{%static 'image/3472488647553124664_20230826190537376.jpg' %}" />
+            </div>
+            <div class="info">
+                <div class="h1">KEEP IN TOUCH WITH ME!</div>
+                <div class="h2">010-5040-853</div>
+                <div class="h2">k2m0071@naver.com</div>
+                <div class="h2">@gangmin_9.30</div>
+            </div>
+        </div>
+    </body>
+</html>
