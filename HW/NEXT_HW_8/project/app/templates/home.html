@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+    </head>
+    <body>
+        <h1>🐻✨강민이의 블로그✨🐻</h1>
+        <div>글 전체 개수 : {{ posts.count }}</div>
+        <div>🔽 전체 글 목록 🔽</div>
+        <div>
+            <ul>
+                {% for post in posts %}
+                <li>
+                    <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="{% url 'new' %}">글 작성하기</a>
+        <h1>모든 카테고리</h1>
+        <ul>
+            {% for category_id, category_name, count in categories_with_counts %}
+            <a href="{% url 'category' category_id %}"> <li>{{ category_name }} {{count}}</li></a>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

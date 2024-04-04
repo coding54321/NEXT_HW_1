@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+    </head>
+    <body>
+        <div>
+            <h2>카테고리</h2>
+            <p>{{ post.category.name }}</p>
+        </div>
+        <div>
+            <h2>글 제목</h2>
+            <p>{{ post.title }}</p>
+        </div>
+        <div>
+            <h2>글 내용</h2>
+            <p>{{ post.content }}</p>
+        </div>
+        <div>
+            <h2>작성 시각</h2>
+            <p>Posted on {{ post.created_at|date:"Y-m-d H:i" }}</p>
+        </div>
+        <a href="{% url 'home' %}">홈으로</a>
+    </body>
+</html>
