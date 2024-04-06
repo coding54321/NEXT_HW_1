@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="title">
+                <div><label for="title">제목</label></div>
+                <div><input type="text" name="title" id="title" placeholder="제목을 입력해주세요." /></div>
+            </div>
+            <div class="content">
+                <div><label for="content">내용</label><div>
+                <div><textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea></div>
+            </div>
+            <div>
+                <label for="date">마감기한</label>
+                <input type="date" name="date" id="date" />
+            </div>
+            <button type="submit">+NEW!</button>
+        </form>
+    </body>
+</html>
