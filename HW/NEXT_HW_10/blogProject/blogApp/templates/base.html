@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+        {% block css %} {% endblock css %}
+    </head>
+    <body>
+        {% block content %} {% endblock content %}
+
+        <div class="footer">
+            <nav>
+                <a href="https://instagram.com/gangmin_9.30" target="_blank">Instagram</a> |
+                <a href="https://github.com/coding54321" target="_blank">Github</a>
+            </nav>
+            <p>
+                <span>저자 : 김강민</span><br />
+                <span>이메일 : k2m0071@naver.com</span><br />
+                <span>Copyright 2024. 김강민. All Rights Reserved.</span>
+            </p>
+        </div>
+    </body>
+</html>

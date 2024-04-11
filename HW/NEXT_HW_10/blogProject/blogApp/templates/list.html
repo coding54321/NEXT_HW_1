@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" href="{% static 'list.css' %}" />
+{% endblock %} {% block content%}
+<h2>글 전체 목록</h2>
+<div>글 전체 개수 : {{ articles.count }}개</div>
+
+{% for article in articles %}
+<div>
+    <h3><a href="{% url 'detail' article_id=article.id %}">{{ article.title }}</a></h3>
+</div>
+{% endfor %}
+
+<h2>카테고리</h2>
+<ul>
+    <li><a href="{% url 'category_list' category_name='HOBBY' %}">취미</a> : {{ category_count_dict.HOBBY }}개</li>
+    <li><a href="{% url 'category_list' category_name='FOOD' %}">음식</a> : {{ category_count_dict.FOOD }}개</li>
+    <li>
+        <a href="{% url 'category_list' category_name='PROGRAMMING' %}"> 프로그래밍 </a>
+        : {{category_count_dict.PROGRAMMING }}개
+    </li>
+</ul>
+
+<a href="{% url 'new' %}">글 쓰러 가기</a>
+{% endblock %}

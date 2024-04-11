@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block css %} {% endblock %} {% block content %}
+<h2>New Article</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" required /><br /><br />
+
+    <label for="content">Content:</label>
+    <textarea name="content" id="content" required></textarea><br /><br />
+
+    <label for="category">Category:</label>
+    <select name="category" id="category" required>
+        <option value="HOBBY">취미</option>
+        <option value="FOOD">음식</option>
+        <option value="PROGRAMMING">프로그래밍</option></select
+    ><br /><br />
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

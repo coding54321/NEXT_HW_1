@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2>글 상세 페이지</h2>
+    <div>
+        <h3>제목</h3>
+        <div>{{ article.title }}</div>
+    </div>
+    <div>
+        <h3>내용</h3>
+        <div>{{ article.content }}</div>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="댓글을 입력해주세요" />
+        <button type="submit">작성하기</button>
+    </form>
+
+    {% for comment in article.comments.all %}
+    <li>{{ comment.content }}
+        <a href={% url 'delete-comment' article.id comment.pk %}>삭제</a>
+    </li>
+    <div>
+        <!-- 대댓글 목록 -->
+        {% for recomment in comment.recomments.all %}
+        <div style="margin-left: 20px;">- {{ recomment.content }}</div>
+        {% endfor %}
+        <!-- 대댓글 작성 폼 -->
+        <form method="POST" style="margin-top: 10px;">
+            {% csrf_token %}
+            <input type="hidden" name="parent_comment_pk" value="{{ comment.pk }}" />
+            <input type="text" name="content" placeholder="대댓글을 입력하세요" />
+            <button type="submit">대댓글 작성</button>
+        </form>
+    </div>
+    {% endfor %}
+
+</div>
+<a href="{% url 'list' %}">전체 목록으로 돌아가기</a>
+{% endblock %}
