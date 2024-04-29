@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <!-- 글 목록을 보여주는 페이지 -->
-        {% if request.user.is_authenticated %}
-        <!-- 로그인한 사용자에게는 로그아웃 링크를 보여줍니다 -->
-        <a href="{% url 'login' %}">Logout</a>
-        {% else %}
-        <!-- 비로그인 사용자에게는 회원가입 링크를 보여줍니다 -->
-        <a href="{% url 'signup' %}">Sign Up</a>
-        {% endif %} {% for post in posts %}
-        <div>
-            <h2><a href="{% url 'post_detail' post_id=post.pk %}">{{ post.title }}</a></h2>
-        </div>
-        {% endfor %} {% if request.user.is_authenticated %}
-        <a href="{% url 'post_new' %}">Create New Post</a>
-        {% endif %}
-    </body>
-</html>
+{% extends 'base.html' %} {% block content %}
+<body>
+    {% if request.user.is_authenticated %}
+
+    <a href="{% url 'login' %}">Logout</a>
+    {% else %}
+
+    <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %} {% for post in posts %}
+    <div>
+        <h2><a href="{% url 'post_detail' post_id=post.pk %}">{{ post.title }}</a></h2>
+    </div>
+    {% endfor %} {% if request.user.is_authenticated %}
+    <a href="{% url 'post_new' %}">Create New Post</a>
+    {% endif %}
+</body>
+{% endblock %}
