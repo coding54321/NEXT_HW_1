@@ -1,0 +1,198 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ol {
+    padding: 0;
+    list-style: none;
+    counter-reset: item;
+}
+
+nav ol li {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ol li::before {
+    counter-increment: item;
+    content: counter(item) '. ';
+    position: absolute;
+    transform: translateX(-100%);
+    right: 100%;
+    text-align: right;
+    width: 20px; /* Adjust this value as necessary */
+}
+
+/* Reset some basic elements for better cross-browser consistency */
+/* Reset some basic elements for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* App container */
+.App {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header styling */
+.App-header {
+    background-color: #283593;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.App-header h1 {
+    font-size: 2.5rem;
+}
+
+/* Navigation styling */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ol {
+    padding: 0;
+    list-style: none;
+    counter-reset: item;
+}
+
+nav ol li {
+    display: flex;
+    justify-content: space-between; /* Adjusted to space out title and deadline */
+    align-items: center; /* Center items vertically */
+    position: relative;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: #e3f2fd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+nav ol li:hover {
+    background: #bbdefb;
+}
+
+nav ol li::before {
+    counter-increment: item;
+    content: counter(item) '. ';
+    position: absolute;
+    left: -30px;
+    color: #283593;
+    font-weight: bold;
+}
+
+.item-title {
+    flex: 1; /* Allow title to take up remaining space */
+    text-align: left; /* Align title to the left */
+}
+
+.item-deadline {
+    flex: 0; /* Prevent deadline from stretching */
+    text-align: right; /* Align deadline to the right */
+    padding-left: 20px; /* Add padding between title and deadline */
+}
+
+/* Article styling */
+article {
+    margin-bottom: 20px;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Form styling */
+form div,
+form p {
+    margin-bottom: 15px;
+}
+
+form input[type='text'],
+form input[type='date'],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type='text']:focus,
+form input[type='date']:focus,
+form textarea:focus {
+    border-color: #283593;
+    box-shadow: 0 0 5px rgba(40, 53, 147, 0.3);
+}
+
+form textarea {
+    height: 100px;
+}
+
+/* Button styling */
+button {
+    padding: 8px 15px; /* Adjusted padding to make buttons more compact */
+    border: none;
+    border-radius: 5px;
+    background-color: #283593;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px; /* Added margin to create space between buttons */
+}
+
+button:hover {
+    background-color: #1a237e;
+}
+
+/* Create and Update form container styling */
+.create-update-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    .App {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .App-header h1 {
+        font-size: 2rem;
+    }
+}
