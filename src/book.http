@@ -1,0 +1,33 @@
+@server = http://localhost:3000
+
+### 모든 책 조회
+GET {{server}}/books
+
+### 새로운 책 추가
+POST {{server}}/books
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "NestJS 입문",
+    "author": "김개발",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z",
+    "isAvailable": true
+}
+
+### 특정 책 조회
+GET {{server}}/books/1
+
+### 특정 책 삭제
+DELETE {{server}}/books/1
+
+### 특정 책 수정
+PUT {{server}}/books/1
+Content-Type: application/json
+
+{
+    "title": "NestJS 심화",
+    "author": "김심화",
+    "isAvailable": false
+}
